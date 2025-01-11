@@ -1,0 +1,14 @@
+No meu projeto, encontrei dificuldades ao seguir o modelo de criação de usuários apresentado nas aulas da formação Linux Essentials. Ao executar o script de criação iac1.sh
+ocorreu o seguinte erro no trecho que utiliza o comando openssl -crypt:
+
+passwd: Unknown option: -crypt  
+passwd: Use -help for summary.  
+Usage: useradd [options] LOGIN  
+useradd -D  
+useradd -D [options]
+  
+Após verificar no ChatGPT, descobri que o erro ocorreu porque a opção -crypt do comando openssl passwd não é reconhecida na distribuição Linux que utilizei durante as aulas.
+Para solucionar o problema, utilizei o comando alternativo openssl passwd -6, que gera senhas com o algoritmo SHA-512 (o padrão recomendado para senhas modernas).
+Com essa alteração, o script funcionou normalmente.
+
+No geral, foi tranquilo acompanhar as aulas e aprender sobre o tema abordado.
